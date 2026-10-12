@@ -31,7 +31,7 @@ from submission events, which fire after submit. Assumes a working connection
 | Input | Notes |
 |---|---|
 | `formId` | Required — the form to attach the endpoint to. |
-| `apiId` | Required — the **full scope domain**, e.g. `oneblink-mcp-test.api.oneblink.io` (not a short id). |
+| `apiId` | Required — the **full scope domain** `<organisation>-<subdomain>.api.oneblink.io` (not a short id). It must match the deployed API's scope exactly; build it per the naming convention — see `oneblink-deploy` → "Scope-domain naming". |
 | `apiEnvironment` | Required — `dev` / `test` / `prod`. |
 | `apiEnvironmentRoute` | Required — must start with `/`, e.g. `/test`. |
 | `overrideLock` | Optional — see locked forms. |
@@ -55,7 +55,8 @@ permission before `overrideLock:true` — never implicit.
 
 ## Rules
 
-- `apiId` is the full scope domain, not a short id.
+- `apiId` is the full scope domain `<organisation>-<subdomain>.api.oneblink.io`
+  (org name prepended, not a short id) — see `oneblink-deploy` naming convention.
 - Route must start with `/` and match the deployed route.
 - Handler keys == form element names, or nothing prefills.
 - Never set `overrideLock` without the user's explicit go-ahead.

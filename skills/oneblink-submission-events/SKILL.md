@@ -40,7 +40,10 @@ the form's own environment, splices the event in, and saves.
 `upsert_api_submission_event` points at an **existing** API+route:
 
 - `apiId`, `apiEnvironment` (dev/test/prod), `apiEnvironmentRoute` (must start
-  with `/`).
+  with `/`). `apiId` is the full scope domain
+  `<organisation>-<subdomain>.api.oneblink.io` — build it per the naming
+  convention in `oneblink-deploy`, never accept a bare subdomain or full domain
+  without checking the org prefix.
 - `organisationManagedSecretId` (optional) verifies request authenticity —
   only its id is handled, never logged.
 
