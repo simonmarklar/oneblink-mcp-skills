@@ -15,7 +15,7 @@ whichever agent you are using.
 Paste this to your agent (Kiro, Claude Code, Cursor, Codex, Gemini CLI, …):
 
 ```
-Install the skills from https://raw.githubusercontent.com/<owner>/oneblink-mcp-skills/main/INSTALL.md
+Install the skills from https://raw.githubusercontent.com/simonmarklar/oneblink-mcp-skills/main/INSTALL.md
 ```
 
 A local checkout works too:
